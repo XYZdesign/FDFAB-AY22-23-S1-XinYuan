@@ -14,7 +14,9 @@ h1, h2, h3 {
 #header {
 	text-align: center;
 } 
-
+.center{
+	text-align: center;
+}
 #footer {
 	clear: both;
 	padding: 10px;
