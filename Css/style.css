@@ -25,7 +25,10 @@ h1, h2, h3 {
 	text-align: right;
 }
 
-
+.centertable {
+	margin-left: auto;
+	margin-right: auto;
+  }
 
 li a, .dropbtn {
 	display: inline-block;
