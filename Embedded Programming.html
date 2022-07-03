@@ -103,9 +103,25 @@
                 <th>LED</th>
                 <th>Pin 0</th>
             </tr>
+            <tr>
+                <th>This code is program in a way that the LED will start flashing whenever the push button is being pressed.
+                    The the void loop() first the led is set to HIGH than a delay of 500ms than changed to LOW
+                </th>
+                <th><p class="center" ><img src="Img/Embedded Programming/flash.png" width="600" height="500"></p></th>
+            </tr>
+            <tr>
+                <th>Make sure when uploading the program we need to use Sketch --> "Upload Using Programmer"</th>
+                <th><img src="Img/Embedded Programming/uup.png" width="400" height="200"></th>
+            </tr>
         </table>
-        <p class="center" ><img src="Img/Embedded Programming/flash.png" width="600" height="500"></p>
-        <p class="center">This code is program in a way that the LED will start flashing whenever the push button is being pressed</p>
+        
+       
+        
+        
+        <h3 class="center">Error I faced:</h3>
+        <p class="center">There was a short between Vcc & UPDI pin but once the Vcc & UPDI pin separated the board was okay</p>
+        <p class="center" ><img src="Img/Embedded Programming/short.png" width="400" height="500"></p>
+       
         <br>
         <video class="center" width="500" controls>
             <source src="Img/PCB/flashing.mp4" type="video/mp4" >
