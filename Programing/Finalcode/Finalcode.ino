@@ -1,4 +1,4 @@
-#define switch1 5
+ #define switch1 5
 #define switch2 6
 #define switch3 7
 #define switch4 4
