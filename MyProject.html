@@ -63,9 +63,9 @@
          <p class="center"><a href="#Eagle">Eagle (PCB board)</a></p>
          <p class="center"><a href="#Fab">Fabrication of PCB board</a></p>
          <p class="center"><a href="#Solder">Soldering</a></p>
-         <p class="center"><a href="#case">Design Case</a></p>
-         <p class="center"><a href="#2D">2D Machining (case and cover)</a></p>
-         <p class="center"><a href="#Test">Testing</a></p>
+         <p class="center"><a href="#case">Design Case and cover</a></p>
+         <p class="center"><a href="#2D">2D Machining case</a></p>
+         <p class="center"><a href="#3D">3D printing cover</a></p>
          <p class="center"><a href="#code">Coding</a></p>
          <p class="center"><a href="#ass">Assembly</a></p>
          <p class="center"><a href="#Final">Final Product</a></p><hr>
@@ -181,13 +181,74 @@
                 <th>Headers, chips and components</th>
                 <th><img src="Img/FinalProject/solderheaders.jpeg" width="350" height="400"></th>
             </tr>
+            <tr>
+                <th>Finish soldering</th>
+                <th><img src="Img/FinalProject/soldering final.jpeg" width="350" height="300"></th>
+            </tr>
         </table><hr>
         <h3 class="center" id="case">Designing the Case and Cover</h3>
         <p class="center">I use fusion360 to desgin my case and cover. For the case it will be 2D Machine and the cover will be 3D printed</p>
-        <p class="center"></p>
-        <p class="center"><img src="Img/FinalProject/" width="350" height="400"></p>
-        <p class="center"></p>
-        <p class="center"></p>
+        <p class="center">Below are the parameters</p>
+        <p class="center"><img src="Img/FinalProject/Parameters.png" width="750" height="200"></p>
+        <p class="center">The cover is 90x80x3mm. After measuring my switches I set the keyslot to 14.20mm and 4.8mm apart</p>
+        <p class="center"><img src="Img/FinalProject/keyslot.png" width="500" height="400"></p>
+        <p class="center">I added extra 1.50mm space incase I measure the height wrongly</p>
+        <p class="center"><img src="Img/FinalProject/extraspace.png" width="500" height="400"></p>
+        <p class="center">The case is 90x80x18mm and a thickness of 10mm. The 15x13mm slot is where the wires for the ftdi will go.</p>
+        <p class="center"><img src="Img/FinalProject/case.png" width="500" height="400"></p>
+        <p class="center">The complete case and cover</p>
+        <p class="center"><img src="Img/FinalProject/fusion360.png" width="500" height="400"></p>
+        <hr>
+        <h3 class="center" id="2D">2D Machining Case</h3>
+        <p class="center">You can view <a href="2D Machining.html"> 2D Machining </a> on how to set up the machine</p>
+        <p class="center"><video class="center" controls>
+            <source src="Img/FinalProject/2Dcnc.mp4" type="video/mp4" >
+            Your browser does not support HTML video.
+        </video></p>
+        <p class="center">After removing it I still have to sand the sides so that it will not be very rough</p>
+        <p class="center"><img src="Img/FinalProject/2dcnc.jpeg" width="500" height="400"></p>
+        <p class="center">Completed case</p>
+        <p class="center"><img src="Img/FinalProject/CNCcover.jpeg" width="400" height="400"></p>
+        <hr><h3 class="center" id="3D">3D printing cover</h3>
+        <p class="center">I use the Ultimaker to print the cover</p>
+        <table class="centertable">
+            <tr>
+                <th>Setting</th>
+                <th>Infomation</th>
+            </tr>
+            <tr>
+                <th>Layer Height</th>
+                <th>0.25mm</th>
+            </tr>
+            <tr>
+                <th>Infill Density</th>
+                <th>10%</th>
+            </tr>
+            <tr>
+                <th>Infill Pattern</th>
+                <th>Grid</th>
+            </tr>
+            <tr>
+                <th>Speed</th>
+                <th>80mm/s</th>
+            </tr>
+            <tr>
+                <th>Support</th>
+                <th>Yes</th>
+            </tr>
+            <tr>
+                <th>Build Plate Adhesion</th>
+                <th>Skirt</th>
+            </tr>
+        </table>
+        <p class="center">Time taken to print: 53min</p>
+        <p class="center"><img src="Img/FinalProject/ultimaker.png" width="400" height="400"></p>
+        <p class="center"><img src="Img/FinalProject/3Dprinting.jpeg" width="400" height="400"></p>
+        <p class="center">Top view</p>
+        <p class="center"><img src="Img/FinalProject/3Dprint top.jpeg" width="350" height="400"></p>
+        <hr>
+        <h3 class="center" id="code">Testing/Coding</h3>
+        <p class="center">Because I didnt include a USB port I will have to code both arduino and python</p>
         <div id="footer">
             Copyright &copy; 2021 Wan Li Xin Yuan
         </div>
