@@ -22,17 +22,17 @@
           margin-left: 40px;
         }
         td, th {
-          border: 2.5px solid rgb(255, 255, 255);
+          border: 2.5px solid rgb(3, 3, 3);
 	        text-align: center;
 	        padding: 10px;
         }
         h2.title {text-align: center; }
         html{
-            background: url(Img/black.jpg) no-repeat fixed ; 
+            background: url(Img/fp\ background.jpg) no-repeat fixed ; 
             background-size: cover;
         }
      </style>
-     <body id = "container">
+     <body id = "containerblack">
         <hr>
         <ul>
                
@@ -56,7 +56,138 @@
             </li>    
         </ul>
         <hr>
-         <h3>My Final Project</h3><hr><br>
+         <h2 class="center">My Final Project</h2><hr>
+         <p class="center"><a href="#Req">Requirement</a></p>
+         <p class="center"><a href="#Idea">Ideation</a></p>
+         <p class="center"><a href="#Bill">Bill of Materials</a></p>
+         <p class="center"><a href="#Eagle">Eagle (PCB board)</a></p>
+         <p class="center"><a href="#Fab">Fabrication of PCB board</a></p>
+         <p class="center"><a href="#Solder">Soldering</a></p>
+         <p class="center"><a href="#case">Design Case</a></p>
+         <p class="center"><a href="#2D">2D Machining (case and cover)</a></p>
+         <p class="center"><a href="#Test">Testing</a></p>
+         <p class="center"><a href="#code">Coding</a></p>
+         <p class="center"><a href="#ass">Assembly</a></p>
+         <p class="center"><a href="#Final">Final Product</a></p><hr>
+         <h3 class="center" id="Req">Requirement</h3>
+         <p class="center">The final project must include:
+            <br>
+            1. 2D and/or 3D designed part(s)<br>
+            2. subtractive manufacturing (i.e. cnc) part<br>
+            3. may include:<br>
+            -->molded or cast part(s)<br>
+            --> 3d printed part(s)<br>
+            -->laser cut part(s)<br>
+            4. an embedded microntroller that you designed & fabricated<br>
+            5. input and/or output device(s) that interacts with the user
+            embedded program</p><hr>
+        <h3 class="center" id="Idea">Ideation</h3>
+        <p class="center">For my final project I have decided to create a keypad that allows me to play my favourite game Tetris.
+             As my current keyboard do not have the arrows key for me to play Tetris and have some spare switches lying around at my house.
+             This keypad will have a total of 4 keys
+        </p><hr>
+        <h3 class="center" id="Bill">Bill of Materials</h3>
+        <table class="centertable">
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+            </tr>
+            <tr>
+                <th>ATTiny1614</th>
+                <th>1</th>
+            </tr>
+            <tr>
+                <th>Gateron Brown Switch</th>
+                <th>4</th>
+            </tr>
+            <tr>
+                <th>Keycaps</th>
+                <th>4</th>
+            </tr>
+            <tr>
+                <th>1uF capacitor</th>
+                <th>1</th>
+            </tr>
+            <tr>
+                <th>Headers</th>
+                <th>8(switches), 6(FTDI), 3(UPDI)</th>
+            </tr>
+            <tr>
+                <th>Female Jumper wires</th>
+                <th>At least 15</th>
+            </tr>
+        </table><hr>
+        <h3 class="center" id="Eagle">Designing PCB board</h3>
+        <p class="center">One of the problems I faced when making the PCB board is deciding on 
+            which chip to use. After consulting Mr Steven, he recommend me to use the ATTiny1614 since 
+            that only have 4 switches. After putting in the headers for the switches I decide to put one 2x2 pinhead
+            in case after making the board I want to add more stuff onto the board.FTDI and UPDI pins are added as I will using
+            them when coding. After arranging everything in order below is how the final circuit will look like.
+        </p><br>
+        <p class="center"><img src="Img/FinalProject/Schemetic board.jpeg" width="700" height="400"></p>
+        <p class="center">I then convert into the schematic board and start arranging it so that all the wires are connected
+            correctly. </p>
+        <p class="center"><img src="Img/FinalProject/Schemetic board2.jpeg" width="600" height="400"></p>
+        <p class="center">Using Gimp to fill up the padholes and change the inside of the outline to white</p>
+        <table class="centertable">
+            <tr>
+                <th>Tracekeypad</th>
+                <th><img src="Img/FinalProject/Tracekeypad.png" width="500" height="400"></th>
+            </tr>
+            <tr>
+                <th>Outlinekeypad</th>
+                <th><img src="Img/FinalProject/outlinekeypad.png" width="500" height="400"></th>
+            </tr>
+        </table>
+       
+        <p class="center">After Importing the image in gimp, I can use the mod software to generate the G-code and save it in my thumb drive than then load it into Stepcraft420</p>
+        <table class="centertable">
+            <tr>
+                <th>Trace cutting</th>
+                <th><img src="Img/FinalProject/tracecutting.jpeg" width="400" height="400">
+                    <img src="Img/FinalProject/tracefinish.jpeg" width="400" height="400">
+                    <img src="Img/FinalProject/tracescreen.jpeg" width="500" height="400">
+                    <br>Video<br>
+                    <video class="center" controls>
+                        <source src="Img/FinalProject/tracecutting.mp4" type="video/mp4" >
+                        Your browser does not support HTML video.
+                    </video></th>
+            </tr>
+            <tr>
+                <th>Outline Cutting</th>
+                <th><img src="Img/FinalProject/outlinecutting.jpeg" width="300" height="450">
+                    <img src="Img/FinalProject/outlinescreen.jpeg" width="500" height="400">
+                    <br>Video<br>
+                    <video class="center" controls>
+                        <source src="Img/FinalProject/outlinecutting.mp4" type="video/mp4" >
+                        Your browser does not support HTML video.
+                    </video></th>
+            </tr>
+            <tr>
+                <th>Completed PCB board. I have to sand off the sharp edges</th>
+                <th><img src="Img/FinalProject/PCB board.jpeg" width="500" height="400"></th>
+            </tr>
+        </table><hr>
+        <h3 class="center" id="Solder">Soldering</h3>
+        <p class="center">After cutting the PCB I can move on to soldering the components.</p>
+        <table class="centertable">
+            <tr>
+                <th>Switches</th>
+                <th><img src="Img/FinalProject/solderingswitch.jpeg" width="350" height="400">
+                <br>Adding the heat shrink will help secure the wires to the switches better<br>
+                <img src="Img/FinalProject/switches complete.jpeg" width="350" height="400"></th>
+            </tr>
+            <tr>
+                <th>Headers, chips and components</th>
+                <th><img src="Img/FinalProject/solderheaders.jpeg" width="350" height="400"></th>
+            </tr>
+        </table><hr>
+        <h3 class="center" id="case">Designing the Case and Cover</h3>
+        <p class="center">I use fusion360 to desgin my case and cover. For the case it will be 2D Machine and the cover will be 3D printed</p>
+        <p class="center"></p>
+        <p class="center"><img src="Img/FinalProject/" width="350" height="400"></p>
+        <p class="center"></p>
+        <p class="center"></p>
         <div id="footer">
             Copyright &copy; 2021 Wan Li Xin Yuan
         </div>
