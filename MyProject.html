@@ -18,11 +18,11 @@
         table {
           font-family: Verdana, sans-serif;
           border-collapse: bold;
-          width: 75%;
-          margin-left: 40px;
+          width: 55%;
+          margin-left: 30px;
         }
         td, th {
-          border: 2.5px solid rgb(3, 3, 3);
+          border: 1px solid rgb(3, 3, 3);
 	        text-align: center;
 	        padding: 10px;
         }
@@ -249,6 +249,85 @@
         <hr>
         <h3 class="center" id="code">Testing/Coding</h3>
         <p class="center">Because I didnt include a USB port I will have to code both arduino and python</p>
+        <p class="center"><img src="Img/FinalProject/attiny1614pinout.png"></p>
+        <table class="centertable">
+            <tr>
+                <th>Attiny1614 (Port pin):</th>
+                <th>Arduino (Analog/Digital):</th>
+            </tr>
+            <tr>
+                <th>PB3</th>
+                <th>4 (switch4)</th>
+            </tr>
+            <tr>
+                <th>PB2</th>
+                <th>5 (switch1)</th>
+            </tr>
+            <tr>
+                <th>PB1</th>
+                <th>6 (switch2)</th>
+            </tr>
+            <tr>
+                <th>PB0</th>
+                <th>7 (switch3)</th>
+            </tr>
+        </table>
+        <p class="center">How does the code work?</p>
+        <h3 class="center">Arduino</h3>
+        <table class="centertable">
+            <tr>
+                
+                <th>1. #define: Used to define the switches to the<br><br>2. const int dlyTime: is use to set a delay for 200ms<br><br>
+                3. In the void setup() we need to have a INPUT_PULLUP for each switch as in my PCB there is no resistor.<br><br>
+                4. Serial.swap(1) is included because my TXD and RXD is swap<br><br>
+                5. Serial begain(9600) also have to be included.<br><br>
+                6. In the void loop() it was coded in a way that if switch1 == LOW than Serial.printIn('1') else it will read the other switches and Serial.printIn the correct number base on what switch is being read.<br><br>
+                7. If no switch is being read, Serial.printIn('0')<br><br>
+                8. At the end a delay is being used</th>
+                <th><img src="Img/FinalProject/arduinocode.jpeg" width="280" height="550"></th>
+            </tr>
+        </table><br>
+        <p class="center">Testing if my switches can be sense</p>
+        <p class="center"><video class="center" controls>
+            <source src="Img/FinalProject/testing.mp4" type="video/mp4" >
+            Your browser does not support HTML video.
+        </video></p>
+        <h3 class="center">Python</h3>
+        <table class="centertable">
+            <tr>
+                <th><img src="Img/FinalProject/pythoncode.png"></th>
+            </tr>
+            <tr>
+                <th>1. First import serial, time and keyboard <br><br>
+                2. initialize b = '0'<br><br>
+                3. Depending on which COM port we using, put them accordingly for this case I am useing COM5<br><br>
+                4. while 1, it will read the line which will then be initialize into Data<br><br>
+                5. Depending on the Data the correct key will be send to the keyboard<br><br>
+                6. In the arduino code above when switch1 is LOW it print line '1' so in the python it will send 4 to the keyboard</th>
+                
+            </tr>
+        </table><br>
+        <p class="center"><img src="Img/FinalProject/testingwithlaptop.jpeg" width="400" height="500"></p>
+        <p class="center">After coding, I assemble my switches to the cover than connect the switches to the PCB board
+            To upload the code to the chip I can use the UPDI and FTDI . After uploading to the chip, I remove my UPDI and open command prompt.
+            First I have to do pip install pynput for my keys to work than I have to locate where my python code is and copy and paste into the command prompt.
+            After that I just have to type python (file) to activate my keys
+        </p>
+        <p class="center"><img src="Img/FinalProject/install.png" ></p>
+        <p class="center"><img src="Img/FinalProject/commandprom.png" ></p>
+
+        <hr><h3 class="center" id="ass">Assembly</h3>
+        <p class="center">All Parts: Case, Cover, Switches, FTDI board and keycaps</p>
+        <p class="center"><img src="Img/FinalProject/All parts.jpeg" width="400" height="300"></p>
+        <p class="center">Assemble the switches to the cover</p>
+        <p class="center"><img src="Img/FinalProject/Switches with wire.jpeg" width="400" height="500"></p>
+        <p class="center"><img src="Img/FinalProject/switches top.jpeg" width="300" height="400"></p>
+        <p class="center">Securing the PCB to the case</p>
+        <p class="center"><img src="Img/FinalProject/assembly.jpeg" width="400" height="300"></p>
+
+        <hr><h3 class="center" id="Final">Final Product</h3>
+        <p class="center"><img src="Img/FinalProject/finaltop.jpeg" width="400" height="300"></p>
+        <p class="center"><img src="Img/FinalProject/Final1.jpeg" width="300" height="400"></p>
         <div id="footer">
             Copyright &copy; 2021 Wan Li Xin Yuan
         </div>
