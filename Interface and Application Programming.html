@@ -15,10 +15,23 @@
         .clearfix{
             overflow: auto;
         }
-       
+        table {
+          font-family: Verdana, sans-serif;
+          border-collapse: bold;
+          width: 55%;
+          margin-left: 30px;
+        }
+        td, th {
+          border: 1px solid rgb(3, 3, 3);
+	        text-align: center;
+	        padding: 10px;
+        }
         h2.title {text-align: center; }
         
-        
+        html{
+            background: url(Img/fp\ background.jpg) no-repeat fixed ; 
+            background-size: cover;
+        }
      </style>
      <body id = "containerblack">
         <hr>
@@ -65,16 +78,34 @@
         <p>Arduino Code: The code is obtain from <a href="https://processing.org/tutorials/electronics#controlling-physical-media%20%3E">here</a></p>
         <p>Serial.swap(1) was added to change the Txd & Rxd ports to the alternative serial ports</p>
         <img src="Img/Interface and Application/arduinocodeled.png"><br>
-        <p>Python Code</p>
-        <img src="Img/Interface and Application/python.png">
-        <p>Command Prompt</p>
-        <p>Because my python file is located in Downloads so I have to do CD Downloads than I have to do DIR *py to find the file.
-            When excuting the code I need to do python (filename).py in this case my file name is LED so I just type python LED.py and press enter. 
-            An error occured after I pressed enter.
+        <p>Led will light up when I press the push button</p>
+        <video width="400" height="400"controls>
+            <source src="Img/Interface and Application/pushbutton.mp4" type="video/mp4" >
+            Your browser does not support HTML video.
+        </video>
+        <h3>Third program</h3>
+        <p>Using processing.exe to code when pushbutton pressed it will be red otherwise it will be green</p>
+        <table>
+            <tr>
+                <th>Not Pressed</th>
+                <th><img src="Img/Interface and Application/notpressed.png"></th>
+            </tr>
+            <tr>
+                <th>Pressed</th>
+                <th><img src="Img/Interface and Application/pressed.png"></th>
+            </tr>
+        </table>
+        <p>Processing.exe Code:</p>
+        <p><ol>1. I first drew a rectangular window (200x200).</ol>
+            <ol>2. Then, I select the correct com port after looking at the arduino ide: COM5.</ol>
+            <ol>3. Set background to white and if serial value is 0 it will be green, serial value 1 it will be red</ol>
+            <ol>4. Setting the color for the box: 0, 255, 21 (green) and 255, 0, 0 (red).</ol>
         </p>
-        <img src="Img/Interface and Application/load.png">
-        <p>After troubleshooting I realised I did not install pyserial so I did pip install pyserial. after installing the code I was able to excute the code without any error</p>
-        <img src="Img/Interface and Application/install.png">
+        <img src="Img/Interface and Application/processing.png">
+        <video width="400" height="400"controls>
+            <source src="Img/Interface and Application/greenred.mp4" type="video/mp4" >
+            Your browser does not support HTML video.
+        </video>
         <div id="footer">
             Copyright &copy; 2021 Wan Li Xin Yuan
         </div>
